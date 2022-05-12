@@ -27,7 +27,7 @@ class Service(models.Model):
         choices=SERVICE_TOPICS
     )
     service_image = models.CharField(
-        max_length=50,
+        max_length=255,
         null=False,
         blank=False
     )
