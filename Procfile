@@ -1,0 +1,1 @@
+web: gunicorn jopt_portfolio.wsgi --log-file -
