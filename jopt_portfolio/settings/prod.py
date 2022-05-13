@@ -6,15 +6,9 @@ import os
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [
-    'www.jopt05.github.io',
-    'https://jopt05.github.io/portfolio/'
-]
+ALLOWED_HOSTS = ['*']
 
-CORS_ALLOWED_ORIGINS = [
-    'www.jopt05.github.io',
-    'https://jopt05.github.io/portfolio/'
-]
+CORS_ALLOW_ALL_ORIGINS = True
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
