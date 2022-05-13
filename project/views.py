@@ -15,6 +15,7 @@ def get_projects(request):
             project['project_technologies'] = list(
                 p.project_technologies.all().values()
             )
+            project['project_topic'] = p.project_topic
             project['project_url'] = p.project_url
             response.append(project)
         print(projects)

@@ -13,4 +13,4 @@ class Technology(models.Model):
     )
 
     def __str__(self):
-        return self.tech_name
+        return f'{self.id} - {self.tech_name}'
