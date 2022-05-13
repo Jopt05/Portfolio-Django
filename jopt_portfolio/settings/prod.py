@@ -7,15 +7,13 @@ import os
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'https://jopt05.github.io/',
-    'http://192.168.100.138',
-    '192.168.100.138',
+    'www.jopt05.github.io',
+    'https://jopt05.github.io/portfolio/'
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'https://jopt05.github.io/',
-    'http://192.168.100.138',
-    '192.168.100.138',
+    'www.jopt05.github.io',
+    'https://jopt05.github.io/portfolio/'
 ]
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
