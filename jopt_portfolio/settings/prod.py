@@ -7,29 +7,13 @@ import os
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'https://jopt05.github.io',
-    'http://jopt05.github.io',
-    'jopt05.github.io',
-    'https://www.jopt05.github.io',
-    'http://www.jopt05.github.io',
-    'www.jopt05.github.io',
-    'https://www.jopt05.github.io/portfolio/',
-    'http://www.jopt05.github.io/portfolio/',
-    'www.jopt05.github.io/portfolio/',
+    'https://jopt05.github.io/',
     'http://192.168.100.138',
     '192.168.100.138',
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'https://jopt05.github.io',
-    'http://jopt05.github.io',
-    'jopt05.github.io',
-    'https://www.jopt05.github.io',
-    'http://www.jopt05.github.io',
-    'www.jopt05.github.io',
-    'https://www.jopt05.github.io/portfolio/',
-    'http://www.jopt05.github.io/portfolio/',
-    'www.jopt05.github.io/portfolio/',
+    'https://jopt05.github.io/',
     'http://192.168.100.138',
     '192.168.100.138',
 ]
