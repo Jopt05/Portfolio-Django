@@ -8,12 +8,24 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     'https://jopt05.github.io',
-    'http://192.168.100.138'
+    'http://jopt05.github.io',
+    'jopt05.github.io',
+    'https://jopt05.github.io/portfolio/',
+    'http://jopt05.github.io/portfolio/',
+    'jopt05.github.io/portfolio/',
+    'http://192.168.100.138',
+    '192.168.100.138',
 ]
 
 CORS_ALLOWED_ORIGINS = [
     'https://jopt05.github.io',
-    'http://192.168.100.138'
+    'http://jopt05.github.io',
+    'jopt05.github.io',
+    'https://jopt05.github.io/portfolio/',
+    'http://jopt05.github.io/portfolio/',
+    'jopt05.github.io/portfolio/',
+    'http://192.168.100.138',
+    '192.168.100.138',
 ]
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
