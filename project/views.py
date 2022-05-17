@@ -14,5 +14,5 @@ class ProjectAPIView(APIView):
 
         return JsonResponse({
             "status": "ok",
-            "services": serializer.data
+            "projects": serializer.data
         })
