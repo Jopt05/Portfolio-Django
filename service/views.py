@@ -1,18 +1,18 @@
+from rest_framework.views import APIView
 from django.http import JsonResponse
 
+from service.serializers import ServiceSerializer
 from .models import Service
 # Create your views here.
 
 
-def get_services(request):
-    try:
-        services = Service.objects.all().values()
+class ServiceAPIView(APIView):
+
+    def get(self, request):
+        services = Service.objects.all()
+        serializer = ServiceSerializer(services, many=True)
+
         return JsonResponse({
             "status": "ok",
-            "services": list(services)
-        })
-    except NameError:
-        return JsonResponse({
-            "status": "fail",
-            "message": "Something went wrong"
+            "services": serializer.data
         })

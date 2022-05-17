@@ -1,30 +1,18 @@
+from rest_framework.views import APIView
 from django.http import JsonResponse
 
+from .serializers import ProjectSerializer
 from .models import Project
 # Create your views here.
 
 
-def get_projects(request):
-    try:
-        response = []
+class ProjectAPIView(APIView):
+
+    def get(self, request):
         projects = Project.objects.all()
-        for p in projects:
-            project = {}
-            project['project_name'] = p.project_name
-            project['project_description'] = p.project_description
-            project['project_technologies'] = list(
-                p.project_technologies.all().values()
-            )
-            project['project_topic'] = p.project_topic
-            project['project_url'] = p.project_url
-            response.append(project)
-        print(projects)
+        serializer = ProjectSerializer(projects, many=True)
+
         return JsonResponse({
             "status": "ok",
-            "projects": response
-        })
-    except NameError:
-        return JsonResponse({
-            "status": "fail",
-            "message": "Something went wrong"
+            "services": serializer.data
         })
