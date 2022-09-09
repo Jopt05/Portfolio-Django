@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/services/', include('service.urls')),
     path('api/projects/', include('project.urls')),
+    path('api/emails/', include('emailapp.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
