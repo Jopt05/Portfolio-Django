@@ -34,6 +34,13 @@ class EmailView(APIView):
                     fail_silently=False,
                 )
 
+                return Response(
+                    {
+                        "ok": True
+                    },
+                    status=status.HTTP_200_OK
+                )
+
             except SMTPException as e:
                 print(e)
                 return Response(
